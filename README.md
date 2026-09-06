@@ -6,6 +6,7 @@
 [![Google Gemini API](https://img.shields.io/badge/Google%20Gemini-2.5%20Flash%20API-8E75C2.svg?logo=googlegemini&logoColor=white)](#)
 [![Google Cloud Platform](https://img.shields.io/badge/Google%20Cloud-GCP%20%7C%20Firestore%20%7C%20Functions-EA4335.svg?logo=googlecloud&logoColor=white)](#)
 [![Firebase](https://img.shields.io/badge/Firebase-Auth%20%7C%20Firestore%20%7C%20Rules-FFCA28.svg?logo=firebase&logoColor=black)](#)
+[![DuckDB-Wasm](https://img.shields.io/badge/DuckDB--Wasm-%3C5ms%20AST%20SQL-FFF100.svg?logo=duckdb&logoColor=black)](#)
 [![Zero-Trust Security](https://img.shields.io/badge/Zero--Trust-Wasm%20Defense%20Mesh-00C853.svg)](#)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
@@ -82,7 +83,7 @@ This project is architected and built natively around the **Google Developer Eco
 ### 1. In-Browser Zero-Trust Static Analysis
 - **Tree-Sitter WebAssembly**: Parses Python, C++, TypeScript, and JavaScript into full Abstract Syntax Tree (AST) relations directly in the browser.
 - **DuckDB-Wasm Relational AST Engine**: Compiles AST nodes, identifiers, loops, functions, and call expressions into in-memory DuckDB tables (`ast_nodes`, `ast_calls`, `ast_loops`, `ast_functions`).
-- **Instant SQL Rule Evaluation**: Executes relational SQL queries across AST structures in <5ms.
+- **Instant SQL Rule Evaluation**: Executes relational SQL queries across AST structures in **<5ms**.
 - **Zero Raw Source Leakage**: Code is tokenized and processed client-side. Only sanitized, anonymized skeletons are ever transmitted for optional LLM remediations.
 
 ### 2. Autonomous 5-Agent Swarm Architecture
@@ -92,10 +93,31 @@ This project is architected and built natively around the **Google Developer Eco
 - 🧪 **POD-04 (Pyodide Fuzzing Gate Pod)**: Automated property-based fuzz tests in an isolated WebAssembly Python sandbox.
 - 📜 **POD-05 (DuckDB Historical CSV Policy Pod)**: Dynamically compiles natural language team CSV policies into executable SQL AST relational queries.
 
-### 3. Dynamic CSV Policy Intelligence & Historical Datasets
-- **CSV to AST Policy Compiler**: Ingests customized CSV policy files (`<id>, <type>, <description>`) and evaluates code against institutional rules in real time.
+### 3. Dynamic CSV to DuckDB-Wasm AST SQL Compilation Engine (<5ms Latency)
+- **Ingestion**: Ingests team CSV policy files formatted as `<id>, <type>, <description>`:
+  ```csv
+  id, type, description
+  1, formatting, Avoid single-character variable names — they hurt readability
+  2, performance, Database queries and I/O operations inside loop iterations cause severe latency
+  3, security, Never interpolate raw user input directly into SQL queries
+  4, forbidden-call, Direct call to built-in abs() or unmetered math is forbidden; use SafeAbs wrapper
+  ```
+- **Dynamic SQL Compilation**: The `csv-rule-compiler.ts` dynamically translates each CSV row into targeted relational SQL queries:
+  ```sql
+  -- Dynamically compiled from CSV Rule #4 ("forbidden-call: abs()")
+  SELECT
+    ce.node_id  AS node_id,
+    ce.file_id  AS file_id,
+    n.start_row AS start_row,
+    n.end_row   AS end_row,
+    ('call to forbidden API "' || ce.callee_name || '"') AS evidence
+  FROM call_expressions ce
+  JOIN nodes n ON n.node_id = ce.node_id
+  WHERE ce.callee_name = 'abs';
+  ```
+- **In-Memory DuckDB Execution**: DuckDB-Wasm executes these compiled queries over the live AST tables concurrently in **<5ms**, instantly surfacing violations on exact lines in the Monaco Editor and D3 graph.
 - **Dedicated History Timeline**: Separated tracking for **Code Review Evaluations** and **CSV Policy Datasets** to keep scans clean and structured.
-- **Interactive Chatbot Prompt Adaptation**: Real-time context awareness dynamically switches suggested prompts between Code Defense questions and CSV Policy questions.
+- **Context-Aware Chatbot Intelligence**: Dynamically switches suggested prompts between Code Defense questions and CSV Policy questions based on user input.
 
 ### 4. Live Interactive Blast Radius Force Graph (D3.js)
 - **Force-Directed Graph Visualization**: Visualizes multi-file dependency trees, function-to-function call chains, and external API sinks.
@@ -125,7 +147,7 @@ This project is architected and built natively around the **Google Developer Eco
 | **Cloud & Backend** | Google Cloud Platform (GCP), Firebase Auth, Cloud Firestore, Cloud Functions (2nd Gen) |
 | **Frontend Framework** | React 18, TypeScript, Tailwind CSS, Monaco Editor, Lucide Icons |
 | **Data & Graph Viz** | D3.js v7 Force-Directed Graph Simulation |
-| **WebAssembly Core** | DuckDB-Wasm, Web Tree-Sitter, Pyodide (Python 3 WASM) |
+| **WebAssembly Core** | DuckDB-Wasm (<5ms SQL Engine), Web Tree-Sitter, Pyodide (Python 3 WASM) |
 | **Cryptography** | WebCrypto API (ECDSA P-256, SHA-256) |
 | **Tooling & Build** | Vite, PostCSS, ESLint, TypeScript |
 
