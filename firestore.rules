@@ -1,0 +1,52 @@
+rules_version = '2';
+
+// Matches the collections written by src/firebase/rules-repository.ts and
+// src/firebase/elo-engine.ts. Everything requires auth; the audit trail
+// under users/{uid}/history is append-only from the client on purpose —
+// an ELO history a developer can edit isn't an audit trail.
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function isSignedIn() {
+      return request.auth != null;
+    }
+    function isOwner(uid) {
+      return isSignedIn() && request.auth.uid == uid;
+    }
+
+    // Institutional-memory rule library: every signed-in developer reads
+    // the live rule set; writes only via commitDistilledRule()'s shape
+    // (no deleting/overwriting someone else's rule, no removing required
+    // fields).
+    match /rules/{ruleId} {
+      allow read: if isSignedIn();
+      allow create: if isSignedIn()
+        && request.resource.data.keys().hasAll(['id', 'type', 'description'])
+        && request.resource.data.id is int
+        && request.resource.data.type is string
+        && request.resource.data.description is string;
+      allow update, delete: if false;
+    }
+
+    // Transactional id counter consumed by commitDistilledRule().
+    match /meta/rule_counter {
+      allow read: if isSignedIn();
+      allow write: if isSignedIn() && request.resource.data.nextId is int;
+    }
+
+    match /users/{uid} {
+      allow read: if isOwner(uid);
+      // publicKeyJwk (attestation TOFU anchor) + skillMatrix (Elo) are the
+      // only fields the client ever sets on this doc.
+      allow write: if isOwner(uid)
+        && request.resource.data.diff(resource.data).affectedKeys()
+             .hasOnly(['publicKeyJwk', 'skillMatrix']);
+
+      match /history/{entryId} {
+        allow read: if isOwner(uid);
+        allow create: if isOwner(uid);
+        allow update, delete: if false; // append-only audit trail
+      }
+    }
+  }
+}

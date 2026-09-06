@@ -1,0 +1,40 @@
+# Dependencies
+node_modules/
+functions/node_modules/
+
+# Production builds & dist
+dist/
+functions/lib/
+
+# Local Environment Variables & Secrets (CRITICAL)
+.env
+.env.*
+!.env.example
+*.secret.local
+functions/.env
+functions/.env.*
+!functions/.env.example
+*.pem
+*.key
+*.cert
+
+# Wasm generated assets (copied on postinstall via scripts/copy-wasm-assets.mjs)
+public/wasm/
+public/pyodide/
+
+# Firebase local emulators and logs
+.firebase/
+firebase-debug.log
+firestore-debug.log
+ui-debug.log
+
+# Temporary recording, audio, and frames artifacts
+scripts/audio_temp/
+scripts/frames_temp/
+*.timestamp-*.mjs
+
+# OS & Editor files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
