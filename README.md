@@ -1,10 +1,12 @@
 # 24/7 Intelligent Code Review (Zero-Trust Wasm Code Defense Mesh)
 
-> **In-Browser Autonomous Multi-Agent Static Analysis, DuckDB-Wasm AST SQL Execution, Dynamic CSV Policy Intelligence, and Cryptographically Verifiable Code Defense.**
+> **Autonomous In-Browser Static Analysis, DuckDB-Wasm AST SQL Compilation, Multi-Agent Swarm Intelligence, and Cryptographically Verifiable Code Defense — Powered by Google Cloud, Google Gemini, Firebase, and Google Antigravity.**
 
-[![Zero-Trust Security](https://img.shields.io/badge/Zero--Trust-Wasm%20Mesh-emerald.svg)](#)
-[![DuckDB-Wasm](https://img.shields.io/badge/DuckDB--Wasm-Relational%20AST-amber.svg)](#)
-[![Google Cloud Platform](https://img.shields.io/badge/Google%20Cloud-GCP%20%7C%20Firebase%20%7C%20Gemini-4285F4.svg)](#)
+[![Built with Google Antigravity](https://img.shields.io/badge/Google%20Antigravity-Agentic%20Engine-4285F4.svg?logo=google&logoColor=white)](#)
+[![Google Gemini API](https://img.shields.io/badge/Google%20Gemini-2.5%20Flash%20API-8E75C2.svg?logo=googlegemini&logoColor=white)](#)
+[![Google Cloud Platform](https://img.shields.io/badge/Google%20Cloud-GCP%20%7C%20Firestore%20%7C%20Functions-EA4335.svg?logo=googlecloud&logoColor=white)](#)
+[![Firebase](https://img.shields.io/badge/Firebase-Auth%20%7C%20Firestore%20%7C%20Rules-FFCA28.svg?logo=firebase&logoColor=black)](#)
+[![Zero-Trust Security](https://img.shields.io/badge/Zero--Trust-Wasm%20Defense%20Mesh-00C853.svg)](#)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 ---
@@ -13,11 +15,69 @@
 
 **24/7 Intelligent Code Review** is a real-time, zero-trust autonomous code defense, algorithmic complexity inspection, and architectural integrity analysis mesh that executes **entirely client-side in your browser**.
 
-By orchestrating **WebAssembly Tree-Sitter**, **DuckDB-Wasm Relational AST Storage**, **Pyodide Fuzzing Sandboxes**, and an **Autonomous 5-Agent Web Worker Swarm**, the Defense Mesh evaluates source code against team policy books and historical CSV datasets without sending raw proprietary source code over external networks.
+Built and orchestrated with **Google Antigravity**, **Google Gemini 2.5 Flash**, **Google Cloud Platform (GCP)**, **Firebase**, and **WebAssembly (Tree-Sitter & DuckDB-Wasm)**, this platform allows engineering teams to evaluate proprietary code against custom team policies and historical CSV datasets with **zero raw source code ever transmitted over external networks**.
 
 ---
 
-## ⚡ Key Features
+## 🚀 Deep Integration with Google Technologies & Tools
+
+This project is architected and built natively around the **Google Developer Ecosystem**:
+
+```
+┌─────────────────────────────────────────────────────────────────────────────────────────┐
+│                        GOOGLE DEVELOPER ECOSYSTEM ARCHITECTURE                          │
+│                                                                                         │
+│  ┌─────────────────────────────────┐       ┌─────────────────────────────────────────┐  │
+│  │     GOOGLE ANTIGRAVITY          │       │           GOOGLE GEMINI API             │  │
+│  │  • Multi-Agent Swarm Logic      │       │  • gemini-2.5-flash (@google/genai)     │  │
+│  │  • Autonomous AST Orchestration │  ───► │  • Structured JSON Rule Distillation    │  │
+│  │  • Zero-Trust Policy Workflows  │       │  • Anonymized AI Code Remediation       │  │
+│  └─────────────────────────────────┘       └─────────────────────────────────────────┘  │
+│                   │                                             │                       │
+│                   ▼                                             ▼                       │
+│  ┌───────────────────────────────────────────────────────────────────────────────────┐  │
+│  │                    FIREBASE & GOOGLE CLOUD PLATFORM (GCP)                         │  │
+│  │  • Google Cloud Identity / Firebase Auth (OAuth Token Lifecycle)                  │  │
+│  │  • Google Cloud Firestore (Append-Only Audit History, Elo Ratings, Rules)         │  │
+│  │  • Google Cloud Functions (2nd Gen Serverless Endpoints + Secret Manager)         │  │
+│  │  • Firebase Emulators (Local Dev Environment on Ports 5001, 8080, 9099)           │  │
+│  │  • Firebase Analytics (Real-time telemetry and scanner diagnostics)               │  │
+│  └───────────────────────────────────────────────────────────────────────────────────┘  │
+│                   │                                                                     │
+│                   ▼                                                                     │
+│  ┌───────────────────────────────────────────────────────────────────────────────────┐  │
+│  │                       GOOGLE CHROMIUM WEB STANDARDS (V8)                          │  │
+│  │  • WebAssembly Execution Core (Tree-Sitter, DuckDB-Wasm, Pyodide WASM)            │  │
+│  │  • Autonomous 5-Agent Swarm (Concurrent Web Workers)                              │  │
+│  │  • WebCrypto API (ECDSA P-256 Digital Audit Attestation & SHA-256 Hashes)          │  │
+│  └───────────────────────────────────────────────────────────────────────────────────┘  │
+└─────────────────────────────────────────────────────────────────────────────────────────┘
+```
+
+### 1. 🤖 Google Antigravity (Agentic Architecture & Workflow)
+- **Autonomous Agent Pods**: Designed with Google Antigravity's agentic engineering paradigm, orchestrating 5 concurrent, specialized Web Worker pods that continuously inspect AST nodes, call hierarchies, and loop depths.
+- **Micro-Task Decomposition**: Implements Antigravity's robust state management and planning patterns to coordinate parsing, DuckDB relational ingestion, fuzzer verification, and graph topology generation.
+
+### 2. ⚡ Google Gemini 2.5 Flash API (`@google/genai`)
+- **Ultra-Fast Code Remediation**: Utilizes Google's state-of-the-art `gemini-2.5-flash` model for sub-second, highly contextual code defense suggestions and safe wrapper replacements.
+- **Strict Privacy Anonymization**: Before invoking Gemini, client-side AST tokenizers replace all identifiers with role-based placeholders (`var_1`, `fn_2`, `Cls_3`) and mask literals (`<TYPE>`). **Gemini receives 0 raw proprietary source code.**
+- **Structured Schema Distillation**: Employs Gemini's native `responseSchema` (Type.OBJECT) for zero-shot rule synthesis, distilling rejected remediations into permanent, reusable static analysis policy rules.
+
+### 3. 🔥 Google Firebase & Google Cloud Platform (GCP)
+- **Firebase Authentication & Cloud Identity**: Secure GitHub OAuth credential exchange and session persistence.
+- **Google Cloud Firestore**: Scalable NoSQL real-time document database maintaining:
+  - **Institutional Memory**: Living repository of team-distilled compliance rules.
+  - **Developer Elo Ratings**: Continuous skill matrix progression (1600 baseline, Grade A/B/Grandmaster).
+  - **Append-Only Audit Trail**: Tamper-proof history of code reviews and CSV policy evaluations.
+- **Google Cloud Functions (2nd Gen / Cloud Run)**: Serverless backend callable functions (`remediateFinding`, `distillCorrection`, `askCodeAssistant`) configured with Google Cloud Secret Manager.
+- **Firebase Local Emulator Suite**: Complete offline development support for Auth, Firestore, and Cloud Functions.
+
+### 4. 🌐 Google Chromium V8 Web Standards
+- Leverages high-performance WebAssembly runtimes, multithreaded Web Workers, and the W3C WebCrypto API for client-side cryptographic attestation.
+
+---
+
+## ⚡ Core Platform Features
 
 ### 1. In-Browser Zero-Trust Static Analysis
 - **Tree-Sitter WebAssembly**: Parses Python, C++, TypeScript, and JavaScript into full Abstract Syntax Tree (AST) relations directly in the browser.
@@ -56,70 +116,18 @@ By orchestrating **WebAssembly Tree-Sitter**, **DuckDB-Wasm Relational AST Stora
 
 ---
 
-## 🏗️ Google Cloud Platform (GCP) & Google Ecosystem Architecture
+## 🛠️ Complete Tech Stack
 
-24/7 Intelligent Code Review is built with **Google Cloud Platform (GCP)** and **Google Technologies**:
-
-1. **Google Cloud Identity & Firebase Auth**: User authentication and OAuth credential management (`@firebase/auth`).
-2. **Google Cloud Firestore**: NoSQL persistent storage for institutional memory, remediation rules, and session history (`@firebase/firestore`).
-3. **Google Cloud Functions / Cloud Run**: Serverless backend callable endpoints for rule distillation and remediation orchestration (`@firebase/functions`).
-4. **Google Gemini (Generative Language API / Vertex AI)**: Real-time contextual remediation engine and code defense assistant using Google's `gemini-2.5-flash` model.
-5. **Google Chromium Web Standards**: Client-side execution utilizing WebAssembly, Web Workers, and WebCrypto standards on Chrome/Chromium V8.
-
-```mermaid
-flowchart TD
-    subgraph Browser ["Client-Side Browser Environment (Zero-Trust Sandbox)"]
-        UI["React 18 + Tailwind UI"]
-        Editor["Monaco Code Studio"]
-        Graph["D3.js Blast Radius Force Graph"]
-        
-        subgraph WasmLayer ["WebAssembly Execution Core"]
-            TS["Tree-Sitter Wasm (AST Parser)"]
-            DuckDB["DuckDB-Wasm (In-Memory SQL)"]
-            Pyodide["Pyodide Wasm (Fuzzing Sandbox)"]
-        end
-        
-        subgraph Swarm ["Autonomous 5-Agent Worker Swarm"]
-            SecWorker["POD-01 : Security Pod Worker"]
-            CompWorker["POD-02 : Complexity Pod Worker"]
-            ArchWorker["POD-03 : Architecture Pod Worker"]
-            FuzzWorker["POD-04 : Pyodide Fuzzing Worker"]
-            CsvWorker["POD-05 : DuckDB CSV Policy Pod"]
-        end
-        
-        Crypto["WebCrypto API (ECDSA P-256 Signature)"]
-    end
-    
-    subgraph GCP ["Google Cloud Platform & Google Ecosystem"]
-        Gemini["Google Gemini 2.5 Flash / Vertex AI"]
-        Firestore["Google Cloud Firestore (Institutional Memory)"]
-        Functions["Google Cloud Functions (Serverless Backend)"]
-        Auth["Google Cloud Identity / Firebase Auth"]
-    end
-    
-    Editor --> TS
-    TS --> DuckDB
-    DuckDB --> Swarm
-    Swarm --> Graph
-    Swarm --> UI
-    Swarm --> Pyodide
-    Pyodide --> Crypto
-    UI -.->|Sanitized AST Skeleton Only| Gemini
-    UI --> Auth
-    UI --> Firestore
-    UI --> Functions
-```
-
----
-
-## 🛠️ Tech Stack
-
-- **Cloud Platform**: Google Cloud Platform (GCP), Firebase (Auth, Firestore, Cloud Functions, Analytics)
-- **AI & Foundation Models**: Google Gemini 2.5 Flash (`@google/genai`, Vertex AI)
-- **Frontend & UI**: React 18, TypeScript, Tailwind CSS, Monaco Editor, D3.js v7, Lucide Icons
-- **WebAssembly Runtimes**: DuckDB-Wasm, Web Tree-Sitter, Pyodide (Python 3 in WebAssembly)
-- **Security & Attestation**: WebCrypto ECDSA (P-256 / SHA-256)
-- **Tooling & Build**: Vite, PostCSS, TypeScript
+| Category | Technologies & Tools |
+| :--- | :--- |
+| **Agentic Framework** | Google Antigravity Agentic IDE & Autonomous Workflows |
+| **AI & LLM Engine** | Google Gemini 2.5 Flash API, `@google/genai`, Google Vertex AI |
+| **Cloud & Backend** | Google Cloud Platform (GCP), Firebase Auth, Cloud Firestore, Cloud Functions (2nd Gen) |
+| **Frontend Framework** | React 18, TypeScript, Tailwind CSS, Monaco Editor, Lucide Icons |
+| **Data & Graph Viz** | D3.js v7 Force-Directed Graph Simulation |
+| **WebAssembly Core** | DuckDB-Wasm, Web Tree-Sitter, Pyodide (Python 3 WASM) |
+| **Cryptography** | WebCrypto API (ECDSA P-256, SHA-256) |
+| **Tooling & Build** | Vite, PostCSS, ESLint, TypeScript |
 
 ---
 
