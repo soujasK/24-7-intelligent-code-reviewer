@@ -12,7 +12,7 @@
 
 ---
 
-## 🎯 Executive Summary
+## Executive Summary
 
 **24/7 Intelligent Code Review** is a real-time, zero-trust autonomous code defense, algorithmic complexity inspection, and architectural integrity analysis mesh that executes **entirely client-side in your browser**.
 
@@ -20,7 +20,7 @@ Built and orchestrated with **Google Antigravity**, **Google Gemini 2.5 Flash**,
 
 ---
 
-## 🚀 Deep Integration with Google Technologies & Tools
+## Deep Integration with Google Technologies & Tools
 
 This project is architected and built natively around the **Google Developer Ecosystem**:
 
@@ -55,16 +55,16 @@ This project is architected and built natively around the **Google Developer Eco
 └─────────────────────────────────────────────────────────────────────────────────────────┘
 ```
 
-### 1. 🤖 Google Antigravity (Agentic Architecture & Workflow)
+### 1. Google Antigravity (Agentic Architecture & Workflow)
 - **Autonomous Agent Pods**: Designed with Google Antigravity's agentic engineering paradigm, orchestrating 5 concurrent, specialized Web Worker pods that continuously inspect AST nodes, call hierarchies, and loop depths.
 - **Micro-Task Decomposition**: Implements Antigravity's robust state management and planning patterns to coordinate parsing, DuckDB relational ingestion, fuzzer verification, and graph topology generation.
 
-### 2. ⚡ Google Gemini 2.5 Flash API (`@google/genai`)
+### 2. Google Gemini 2.5 Flash API (`@google/genai`)
 - **Ultra-Fast Code Remediation**: Utilizes Google's state-of-the-art `gemini-2.5-flash` model for sub-second, highly contextual code defense suggestions and safe wrapper replacements.
 - **Strict Privacy Anonymization**: Before invoking Gemini, client-side AST tokenizers replace all identifiers with role-based placeholders (`var_1`, `fn_2`, `Cls_3`) and mask literals (`<TYPE>`). **Gemini receives 0 raw proprietary source code.**
 - **Structured Schema Distillation**: Employs Gemini's native `responseSchema` (Type.OBJECT) for zero-shot rule synthesis, distilling rejected remediations into permanent, reusable static analysis policy rules.
 
-### 3. 🔥 Google Firebase & Google Cloud Platform (GCP)
+### 3. Google Firebase & Google Cloud Platform (GCP)
 - **Firebase Authentication & Cloud Identity**: Secure GitHub OAuth credential exchange and session persistence.
 - **Google Cloud Firestore**: Scalable NoSQL real-time document database maintaining:
   - **Institutional Memory**: Living repository of team-distilled compliance rules.
@@ -73,12 +73,12 @@ This project is architected and built natively around the **Google Developer Eco
 - **Google Cloud Functions (2nd Gen / Cloud Run)**: Serverless backend callable functions (`remediateFinding`, `distillCorrection`, `askCodeAssistant`) configured with Google Cloud Secret Manager.
 - **Firebase Local Emulator Suite**: Complete offline development support for Auth, Firestore, and Cloud Functions.
 
-### 4. 🌐 Google Chromium V8 Web Standards
+### 4. Google Chromium V8 Web Standards
 - Leverages high-performance WebAssembly runtimes, multithreaded Web Workers, and the W3C WebCrypto API for client-side cryptographic attestation.
 
 ---
 
-## ⚡ Core Platform Features
+## Core Platform Features
 
 ### 1. In-Browser Zero-Trust Static Analysis
 - **Tree-Sitter WebAssembly**: Parses Python, C++, TypeScript, and JavaScript into full Abstract Syntax Tree (AST) relations directly in the browser.
@@ -87,11 +87,11 @@ This project is architected and built natively around the **Google Developer Eco
 - **Zero Raw Source Leakage**: Code is tokenized and processed client-side. Only sanitized, anonymized skeletons are ever transmitted for optional LLM remediations.
 
 ### 2. Autonomous 5-Agent Swarm Architecture
-- 🛡️ **POD-01 (Security & Deserialization Pod)**: Scans AST for unverified dynamic sinks (`pickle.loads`, `eval`, `exec`, `os.system`, SQL injection).
-- ⚡ **POD-02 (Algorithmic Complexity Pod)**: Detects nested loop bottlenecks ($O(N^2)$), invariant call overhead inside iterations, and algorithmic scaling issues.
-- 🌐 **POD-03 (Architecture & Blast Radius Pod)**: Analyzes cross-module call fanout, coupling density, and multi-file dependency blast radii.
-- 🧪 **POD-04 (Pyodide Fuzzing Gate Pod)**: Automated property-based fuzz tests in an isolated WebAssembly Python sandbox.
-- 📜 **POD-05 (DuckDB Historical CSV Policy Pod)**: Dynamically compiles natural language team CSV policies into executable SQL AST relational queries.
+- **POD-01 (Security & Deserialization Pod)**: Scans AST for unverified dynamic sinks (`pickle.loads`, `eval`, `exec`, `os.system`, SQL injection).
+- **POD-02 (Algorithmic Complexity Pod)**: Detects nested loop bottlenecks ($O(N^2)$), invariant call overhead inside iterations, and algorithmic scaling issues.
+- **POD-03 (Architecture & Blast Radius Pod)**: Analyzes cross-module call fanout, coupling density, and multi-file dependency blast radii.
+- **POD-04 (Pyodide Fuzzing Gate Pod)**: Automated property-based fuzz tests in an isolated WebAssembly Python sandbox.
+- **POD-05 (DuckDB Historical CSV Policy Pod)**: Dynamically compiles natural language team CSV policies into executable SQL AST relational queries.
 
 ### 3. Dynamic CSV to DuckDB-Wasm AST SQL Compilation Engine (<5ms Latency)
 - **Ingestion**: Ingests team CSV policy files formatted as `<id>, <type>, <description>`:
@@ -138,7 +138,7 @@ This project is architected and built natively around the **Google Developer Eco
 
 ---
 
-## 🛠️ Complete Tech Stack
+## Complete Tech Stack
 
 | Category | Technologies & Tools |
 | :--- | :--- |
@@ -153,7 +153,7 @@ This project is architected and built natively around the **Google Developer Eco
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 - **Node.js**: `v18.0.0` or later
@@ -200,6 +200,6 @@ This project is architected and built natively around the **Google Developer Eco
 
 ---
 
-## 📄 License
+## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
